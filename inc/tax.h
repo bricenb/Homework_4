@@ -1,7 +1,9 @@
+/* Copyright 2020 Bricen Bennett CSCE240 */
+#ifndef INC_TAX_H_
+#define INC_TAX_H_
 #include <istream>
 #include <ostream>
 #include <string>
-
 
 class Tax {
  public:
@@ -44,4 +46,9 @@ class Tax {
    *   AAA 00.0
    */
   std::istream& Insert(std::istream* in);
+
+ private:
+    std::string code_;
+    double percent_;
 };
+#endif  // INC_TAX_H_

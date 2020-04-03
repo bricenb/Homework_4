@@ -1,6 +1,7 @@
 /* Copyright 2020 Bricen Bennett CSCE240 */
-#ifndef INC_TAX_H_
-#define INC_TAX_H_
+#ifndef CSCE240_HW4_INC_TAX_H_
+#define CSCE240_HW4_INC_TAX_H_
+
 #include <istream>
 #include <ostream>
 #include <string>
@@ -51,4 +52,4 @@ class Tax {
     std::string code_;
     double percent_;
 };
-#endif  // INC_TAX_H_
+#endif  // CSCE240_HW4_INC_TAX_H_

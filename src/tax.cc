@@ -4,13 +4,14 @@ using std::istream;
 using std::ostream;
 using std::string;
 
-Tax::Tax(const string& code, double percent) : code_(code), percent_(percent) {
+Tax::Tax(const std::string& code, double percent) : code_(code),
+         percent_(percent) {
   if (percent_ < 0) {
     percent_ *= -1;
   }
 }
 
-const string& Tax::code() const {
+const std::string& Tax::code() const {
   return code_;
 }
 
@@ -30,12 +31,12 @@ double Tax::Calculate(double amount) const {
   return (percent_ / 100) * amount;
 }
 
-ostream& Tax::Extract(ostream* out) const {
+std::ostream& Tax::Extract(std::ostream* out) const {
   *out << code_ << ':' << percent_;
   return *out;
 }
 
-istream& Tax::Insert(istream* in) {
+std::istream& Tax::Insert(std::istream* in) {
   char white_space;
   *in >> code_ >> white_space >> percent_;
   return *in;

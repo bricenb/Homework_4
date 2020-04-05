@@ -37,7 +37,6 @@ std::ostream& Tax::Extract(std::ostream* out) const {
 }
 
 std::istream& Tax::Insert(std::istream* in) {
-  char white_space;
-  *in >> code_ >> white_space >> percent_;
+  *in >> code_ >> percent_;
   return *in;
 }

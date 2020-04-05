@@ -53,8 +53,8 @@ int main(int argc, char* argv[]) {
     case 2: {  // block needed to declare variables in switch
     // map test 2 to TestTaxInsert
       cout << "TESTING Tax::Insert" << endl;
-      Tax insert_tax("INS", 25.4);
-      if (TestTaxInsert(insert_tax, "INS", 25.4)) {
+      Tax insert_tax("BGU", 23.9);
+      if (TestTaxInsert(insert_tax, "BGU", 23.9)) {
         cout << "  PASSED" << endl;
         if (!run_all)
           return 0;
